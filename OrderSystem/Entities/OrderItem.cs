@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace OrderSystem.Entities
+﻿namespace OrderSystem.Entities
 {
     class OrderItem
     {
         public int Quantity { get; set; }
         public double Price { get; set; }
+        public Product Item { get; set; }
 
         public OrderItem()
         {
@@ -18,6 +13,7 @@ namespace OrderSystem.Entities
         {
             Quantity = quantity;
             Price = item.Price;
+            Item = item;
         }
         public double SubTotal()
         {
